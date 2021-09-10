@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">MadLibsApp</string>
+    <string name="app_name"><b>Aashika MadLibs App</b></string>
+    <!-- I got this code from this video below to bold the title of my app-->
+    <!-- https://www.youtube.com/watch?v=Irdnvehy8m4&t=111s-->
+    <string name="bolded_text"><b>TextView</b></string>
+
 </resources>
