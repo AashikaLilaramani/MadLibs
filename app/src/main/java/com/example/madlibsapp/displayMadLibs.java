@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
@@ -61,11 +62,11 @@ public class displayMadLibs extends AppCompatActivity {
         //get a reference to view on screen we want to display text in
         TextView theAdj2TV = findViewById(R.id.fullAdj2String);
 
-        theAdjTV.setText(theAdj);
-        theOccTV.setText(theOcc);
-        thePlaTV.setText(thePla);
-        theNumTV.setText(theNum);
-        theAdj2TV.setText(theAdj2);
+        theAdjTV.setText(Html.fromHtml(theAdj));
+        theOccTV.setText(Html.fromHtml(theOcc));
+        thePlaTV.setText(Html.fromHtml(thePla));
+        theNumTV.setText(Html.fromHtml(theNum));
+        theAdj2TV.setText(Html.fromHtml(theAdj2));
 
     }
     public void newScreen(View v)

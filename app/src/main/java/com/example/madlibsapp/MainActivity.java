@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int clickCount = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +22,22 @@ public class MainActivity extends AppCompatActivity {
     }
     public void instructions(View v)
     {
+
+        clickCount++;
         String theIntro = "Once you click the continue button, you will be taken " +
                 "to a screen where you can enter in words as directed. " +
                 "Once you are done with that, you will see a story with " +
                 "the words you inputted.";
         TextView intro = findViewById(R.id.introTextView);
         intro.setText(theIntro);
-        intro.setVisibility(View.VISIBLE);
+        if(clickCount % 2 == 0)
+        {
+            intro.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            intro.setVisibility(View.INVISIBLE);
+        }
 
     }
 }
